@@ -1,0 +1,56 @@
+
+<div class="container " style="right:{{width}}px">
+  <div class="headerbot"><i class="fas fa-robot"></i></div>
+  <div class="head">
+    <label for="cars"> Services  </label>
+    <select style="background-color: black; border:none; color:white;" (change)="onChange($event)">
+    <option  *ngFor="let item of listroom"  value="{{item.id}}">
+      {{item.name}}
+    </option>
+    </select>
+      <i  class="close fas fa-window-close" (click)="closechatbox()"></i>
+
+  </div>
+<div *ngIf="showroom == 1">
+  <div class="documents">
+    <div *ngFor="let item of doc">
+      <div class="client">
+        <h4 *ngIf="item.id != 'Bot'" style="display:inline;background-color: rgb(201, 201, 201); ">{{item.doc}}</h4>
+      </div>
+      <h4 *ngIf="item.id == 'Bot'" style="background-color: rgb(221, 221, 221);"><i class="fas fa-robot"></i><div [innerHTML]="item.doc"></div></h4>
+
+    </div>
+
+  </div>
+  <div class="footer">
+    <input
+    [(ngModel)]="text"
+    placeholder='Start typing...'
+  />
+  <p class="btn-send" (click)="editDoc()"><i class="far fa-paper-plane"></i></p>
+
+  </div>
+  </div>
+  <div *ngIf="showroom == 2">
+<div class="documents">
+  <div *ngFor="let item of fulldoc">
+    <h4 *ngIf="item.user == userid" style="text-align:right;background-color: rgb(135, 166, 252); ">{{item.doc}}</h4>
+    <h4 *ngIf="item.user != userid" style="text-align:left;background-color: rgb(221, 221, 221); ">{{item.doc}}</h4>
+  </div>
+
+</div>
+<div class="footer">
+  <input
+  [(ngModel)]="text"
+  placeholder='Start typing...'
+/>
+<p class="btn-send" (click)="editDoc()"><i class="far fa-paper-plane"></i></p>
+
+</div>
+</div>
+
+</div>
+<div class="buttonshow" *ngIf="showchatbot == false">
+  <p><i class="fas fa-comment-dollar" (click)="chatbox()"></i></p>
+
+</div>

@@ -1,0 +1,47 @@
+<div class="linechart section" >
+<div class="row">
+    <div class="col-3 data" *ngFor="let item of Coin">
+    <h5>{{item.symbol}}</h5>
+    <h6 *ngIf="item.close >= item.open">{{item.close}}/ <span  style="color:rgb(26, 151, 26)">{{item.percentChange  | number:'1.1-2'}}%</span></h6>
+    <h6 *ngIf="item.open > item.close">{{item.close}}/ <span  style="color:rgb(224, 39, 39)">{{item.percentChange  | number:'1.1-2'}}%</span></h6>
+    <h5>{{item.open | currency}}</h5>
+    <p></p>
+    </div>
+    <div class="col-12 ibox-content">
+        <h5>Xu Hướng Thị Trường</h5>
+        <div class="table-responsive">
+          <table class="table table-hover">
+              <tr>
+                <th>Tên</th>
+                <th class="text-right">Giá gần đây</th>
+                <th class="text-right">Biến động</th>
+                <th class="text-right">Cao nhất 24h</th>
+                <th class="text-right">Thấp nhất 24h</th>
+
+              </tr>
+            <tbody>
+              <tr *ngFor="let item of priceall">
+                <td style="color:rgb(255, 252, 75);"> {{item.symbol}}</td>
+
+                <td class="text-right">{{item.close|currency}}</td>
+                <td class="text-right" *ngIf="item.percentChange >= 0" style="color:green">{{item.percentChange | number:'0.1-2'}}%</td>
+                <td class="text-right" *ngIf="item.percentChange < 0" style="color:red">{{item.percentChange | number:'0.1-2'}}%</td>
+                <td class="text-right">{{item.high|currency}}</td>
+                <td class="text-right">{{item.low|currency}}</td>
+
+              </tr>
+
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    <div style="display:{{tradingview}}" class="col-9 tradingview-widget-container">
+        <div id="tradingview_63d50"></div>
+    </div>
+    <button *ngIf="tradingview == 'none'" class="btn-primary" (click)="showtradingview()">Open Trading View</button>
+    <button *ngIf="tradingview == 'block'" class="btn-danger" (click)="closeshowtradingview()">Close Trading View</button>
+</div>
+<h1>{{oder}}</h1>
+</div>
+

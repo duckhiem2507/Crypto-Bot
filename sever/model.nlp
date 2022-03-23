@@ -1,0 +1,525 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "nlu": {
+      "useNoneFeature": false
+    },
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager",
+      "useNoneFeature": false
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "useNoneFeature": false,
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "binanc": {
+            "intent": "moneycontrol",
+            "domain": "default"
+          },
+          "for,goodby,now": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye,care,take": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "feel": {
+            "intent": "greetings.feel",
+            "domain": "default"
+          },
+          "bye,for,now": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "go,i,must": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "are,how,you": {
+            "intent": "greetings.healthy",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "hello": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "chao,xin": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "moneycontrol": "default",
+          "greetings.bye": "default",
+          "greetings.feel": "default",
+          "greetings.healthy": "default",
+          "greetings.hello": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "binance",
+            "intent": "moneycontrol"
+          },
+          {
+            "domain": "default",
+            "utterance": "goodbye for now",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye bye take care",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye bye",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "feel",
+            "intent": "greetings.feel"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye for now",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "i must go",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "How are you",
+            "intent": "greetings.healthy"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Xin chao",
+            "intent": "greetings.hello"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "binanc": 1,
+              "goodby": 1,
+              "for": 1,
+              "now": 1,
+              "bye": 1,
+              "take": 1,
+              "care": 1,
+              "feel": 1,
+              "i": 1,
+              "must": 1,
+              "go": 1,
+              "how": 1,
+              "are": 1,
+              "you": 1,
+              "hi": 1,
+              "hello": 1,
+              "xin": 1,
+              "chao": 1
+            },
+            "intents": {
+              "moneycontrol": 1,
+              "greetings.bye": 1,
+              "greetings.feel": 1,
+              "greetings.healthy": 1,
+              "greetings.hello": 1
+            },
+            "intentFeatures": {
+              "moneycontrol": {
+                "binanc": 1
+              },
+              "greetings.bye": {
+                "goodby": 1,
+                "for": 1,
+                "now": 1,
+                "bye": 1,
+                "take": 1,
+                "care": 1,
+                "i": 1,
+                "must": 1,
+                "go": 1
+              },
+              "greetings.feel": {
+                "feel": 1
+              },
+              "greetings.healthy": {
+                "how": 1,
+                "are": 1,
+                "you": 1
+              },
+              "greetings.hello": {
+                "hi": 1,
+                "hello": 1,
+                "xin": 1,
+                "chao": 1
+              }
+            },
+            "featuresToIntent": {
+              "binanc": [
+                "moneycontrol"
+              ],
+              "goodby": [
+                "greetings.bye"
+              ],
+              "for": [
+                "greetings.bye"
+              ],
+              "now": [
+                "greetings.bye"
+              ],
+              "bye": [
+                "greetings.bye"
+              ],
+              "take": [
+                "greetings.bye"
+              ],
+              "care": [
+                "greetings.bye"
+              ],
+              "i": [
+                "greetings.bye"
+              ],
+              "must": [
+                "greetings.bye"
+              ],
+              "go": [
+                "greetings.bye"
+              ],
+              "feel": [
+                "greetings.feel"
+              ],
+              "how": [
+                "greetings.healthy"
+              ],
+              "are": [
+                "greetings.healthy"
+              ],
+              "you": [
+                "greetings.healthy"
+              ],
+              "hi": [
+                "greetings.hello"
+              ],
+              "hello": [
+                "greetings.hello"
+              ],
+              "xin": [
+                "greetings.hello"
+              ],
+              "chao": [
+                "greetings.hello"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "useNoneFeature": false,
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "binanc",
+                "goodby",
+                "for",
+                "now",
+                "bye",
+                "take",
+                "care",
+                "feel",
+                "i",
+                "must",
+                "go",
+                "how",
+                "are",
+                "you",
+                "hi",
+                "hello",
+                "xin",
+                "chao"
+              ],
+              "intents": [
+                "moneycontrol",
+                "greetings.bye",
+                "greetings.feel",
+                "greetings.healthy",
+                "greetings.hello"
+              ],
+              "perceptrons": [
+                [
+                  12.597375869750977,
+                  -0.5023552775382996,
+                  -0.6002594828605652,
+                  -0.6002594828605652,
+                  -1.6876678466796875,
+                  -0.3357033431529999,
+                  -0.3357033431529999,
+                  -1.6875864267349243,
+                  -0.562654972076416,
+                  -0.562654972076416,
+                  -0.562654972076416,
+                  -0.5626536011695862,
+                  -0.5626536011695862,
+                  -0.5626536011695862,
+                  -1.687510371208191,
+                  -1.6874274015426636,
+                  -0.8438336849212646,
+                  -0.8438336849212646,
+                  1.6876800311198636
+                ],
+                [
+                  -3.4124062061309814,
+                  9.67415714263916,
+                  0.4436095654964447,
+                  0.4436095654964447,
+                  10.254450798034668,
+                  0.3180139660835266,
+                  0.3180139660835266,
+                  -3.447641372680664,
+                  3.6065573692321777,
+                  3.6065573692321777,
+                  3.6065573692321777,
+                  -1.1551401615142822,
+                  -1.1551401615142822,
+                  -1.1551401615142822,
+                  -3.424192190170288,
+                  -3.421276807785034,
+                  -1.7256255149841309,
+                  -1.7256255149841309,
+                  3.4712369507371554
+                ],
+                [
+                  -1.6978874206542969,
+                  -0.4049127995967865,
+                  -0.6465914249420166,
+                  -0.6465914249420166,
+                  -1.6978400945663452,
+                  -0.27305975556373596,
+                  -0.27305975556373596,
+                  12.586956977844238,
+                  -0.5720955729484558,
+                  -0.5720955729484558,
+                  -0.5720955729484558,
+                  -0.5721954703330994,
+                  -0.5721954703330994,
+                  -0.5721954703330994,
+                  -1.6980451345443726,
+                  -1.697986364364624,
+                  -0.8491058349609375,
+                  -0.8491058349609375,
+                  1.6981068661396947
+                ],
+                [
+                  -0.528377115726471,
+                  -0.20789290964603424,
+                  -0.2779761850833893,
+                  -0.2779761850833893,
+                  -0.5739348530769348,
+                  -0.17481763660907745,
+                  -0.17481763660907745,
+                  -0.5263826847076416,
+                  -0.23500856757164001,
+                  -0.23500856757164001,
+                  -0.23500856757164001,
+                  4.586442947387695,
+                  4.586442947387695,
+                  4.586442947387695,
+                  -0.5428079962730408,
+                  -0.5357374548912048,
+                  -0.3416682481765747,
+                  -0.3416682481765747,
+                  0.5263836444801542
+                ],
+                [
+                  -4.221367835998535,
+                  -1.2380194664001465,
+                  -1.4954618215560913,
+                  -1.4954618215560913,
+                  -4.221322059631348,
+                  -0.842268705368042,
+                  -0.842268705368042,
+                  -4.221088886260986,
+                  -1.4071779251098633,
+                  -1.4071779251098633,
+                  -1.4071779251098633,
+                  -1.4071776866912842,
+                  -1.4071776866912842,
+                  -1.4071776866912842,
+                  10.063791275024414,
+                  10.063641548156738,
+                  5.032060623168945,
+                  5.032060623168945,
+                  4.221578738288673
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "binance"
+      ],
+      [
+        "en",
+        "goodbye for now"
+      ],
+      [
+        "en",
+        "bye bye take care"
+      ],
+      [
+        "en",
+        "bye bye"
+      ],
+      [
+        "en",
+        "feel"
+      ],
+      [
+        "en",
+        "bye for now"
+      ],
+      [
+        "en",
+        "i must go"
+      ],
+      [
+        "en",
+        "How are you"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "Xin chao"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greetings.hello": [
+          {
+            "answer": "Hello,How are you!"
+          }
+        ],
+        "greetings.feel": [
+          {
+            "answer": "Oh, Good"
+          }
+        ],
+        "greetings.bye": [
+          {
+            "answer": "Good bye,See you again!"
+          }
+        ],
+        "greetings.healthy": [
+          {
+            "answer": "I`m fine Thanks,How do you feel today?"
+          }
+        ],
+        "moneycontrol": [
+          {
+            "answer": "<a class=\"fx-widget\" data-widget=\"crypto-market-movers\" data-lang=\"en\" data-crypto-type=\"coins\" data-primary-text-color=\"#333333\" data-secondary-text-color=\"#999999\" data-border-color=\"#d8d8d8\" data-background-color=\"#ffffff\" data-header-background-color=\"#eeeeee\" data-header-text-color=\"#333333\" data-drop-down-title-color=\"#333333\" data-drop-down-text-color=\"#a3a3a3\" data-drop-down-border-color=\"#d8d8d8\" data-width=\"775\" data-height=\"560\" data-chart data-full-view data-url=\"https://www.binance.com/en\" href=\"https://www.binance.com/en\" rel=\"nofollow\" style=\"font-family:Helvetica;font-size:16px;line-height:1.5;text-decoration:none;\"> <span style=\"color:#999999;display:inline-block;margin-top:10px;font-size:12px;\">Powered By </span> <img width=\"87px\" height=\"14px\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Binance_logo.svg/2560px-Binance_logo.svg.png\" alt=\"FX Empire logo\" /> </a> <script async charset=\"utf-8\" src=\"https://public.bnbstatic.com/static/js/ocbs/binance-fiat-widget.js\" ></script>"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

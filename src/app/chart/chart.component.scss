@@ -1,0 +1,73 @@
+.left{
+    width:900px;
+    min-height: 700px;
+    float:left;
+}
+
+span{
+  font-size: 13px;
+  font-weight: 400;
+
+}
+.section{
+  position: relative;
+  width:100%;
+  min-height: 80vh;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  background: rgba(71, 71, 71, 0);
+}
+
+.data{
+  text-align: left;
+  margin:15px 0px;
+  padding:50px 80px;
+  background: rgba(0, 0, 0, 0.452);
+
+ h5{
+   font-family: 'Times New Roman', Times, serif;
+ }
+ h6{
+  font-family: 'Times New Roman', Times, serif;
+  color:rgba(218, 218, 218, 0.815);
+}
+ p{
+   font-size: 12px;
+ }
+
+}
+.form-group{
+  text-align: center;
+}
+.btn-primary, .btn-danger{
+  border-radius: 5px;
+  margin: 1px;
+}
+h5{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  color:rgb(218, 218, 218);
+}
+th{
+  width: 250px;
+  padding-bottom: 10px;
+  padding-left:8px;
+  font-size: 15px;
+  color:rgb(255, 255, 255);
+  font-family: 'Times New Roman', Times, serif;
+  border: none;
+}
+td{
+  font-size: 20px;
+  padding:20px 8px;
+  font-family: 'Times New Roman', Times, serif;
+  align-items: flex-start;
+  line-height: 1.42857;
+  font-weight: 400;
+  color:rgb(255, 255, 255);
+  border: none;
+}
+.ibox-content{
+  margin-top: 45px;
+}

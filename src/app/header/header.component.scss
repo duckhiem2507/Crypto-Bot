@@ -1,0 +1,146 @@
+*{
+  margin: 0px;
+  padding:0px;
+  box-sizing: border-box;
+
+}
+.circle{
+  position: absolute;
+  top: -85px;
+  right: 30px;
+  width: 100%;
+  height: 100%;
+
+
+}
+section{
+  position: relative;
+  width:100%;
+  min-height: 65vh;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(82, 80, 80, 0.404);
+}
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000000;
+  padding: 10px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #b6b4b4;
+  i{
+    font-size: 60px;
+    color:#000000;
+    border:2px solid #fff;
+    border-radius: 50%;
+  }
+}
+header .logo{
+  position: absolute;
+  top:-35px;
+  left:0px;
+  width: 200px;
+  color:aliceblue;
+}
+header ul{
+  position: relative;
+  display: flex;
+}
+header ul li{
+  list-style: none;
+}
+header ul li a {
+  display:inline-block;
+  color:rgb(231, 231, 231);
+  font-weight: 600;
+  margin-left: 20px;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+}
+.content{
+  margin-top:50px ;
+  position: relative;
+  width:100%;
+  padding-left:40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .textbox{
+  color: rgb(192, 187, 187);
+  max-width: 750px;
+}
+.content .textbox h2{
+  color: rgb(185, 185, 185);
+  font-size: 4em;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+.content .textbox span{
+  color: rgb(212, 139, 2);
+  font-weight: 600;
+  padding-left: 10%;
+}
+.content .textbox p{
+  color: rgb(175, 175, 175);
+}
+.content .imgbox{
+  position: absolute;
+  max-width: 600px;
+  right: -40px;
+  top: 40px;
+
+
+}
+.content .imgbox .bitcoin{
+  width: 400px;
+}
+footer{
+width: 100%;
+display: flex;
+justify-content: center;
+}
+footer ul li{
+  list-style: none;
+  float:left;
+
+}
+footer ul li img{
+  width: 80px;
+}
+footer ul li img:hover{
+  width: 90px;
+}
+.circle::before{
+  content:'';
+  position:absolute;
+  top:180px;
+  right: -10px;
+  width:330px;
+  height:330px;
+  background: linear-gradient(rgba(82, 80, 80, 0.404),#ffffff);
+  animation: animate 5s linear infinite;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+.circle::after{
+  content:'';
+  position: absolute;
+  border-radius: 10%;
+}
+@keyframes animate {
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform:rotate(360deg);
+
+  }
+}
